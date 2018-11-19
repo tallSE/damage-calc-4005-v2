@@ -10,7 +10,7 @@ jobs:
       - checkout
       - run: npm install
       - run: mkdir junit
-      - run: npm install
+      - run:
           command: node_modules/.bin/mocha test --mocha-junit-reporter
           environment:
             MOCHA_FILE: ./junit/test-result.xml
